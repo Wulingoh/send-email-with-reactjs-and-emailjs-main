@@ -53,11 +53,11 @@ function App() {
             // maintitle={"What do you have that will help you reach the GOAL"}
             sectiontitle={"Taha Tinana-Physical well-being"}
             q1={"How does your body feel, moves, and grows?"}
-            q1name={"bodyfeelmessage"}
+            q1name={"q1bodyfeelmessage"}
             q2={"What do you do to take care of your body?"}
-            q2name={"bodycaremessage"}
+            q2name={"q2bodycaremessage"}
             q3={"What do you need to help you? / How can you be supported?"}
-            q3name={"bodyhelpmessage"}
+            q3name={"q3bodyhelpmessage"}
           ></CardWithHeader>
 
           <CardWithHeader
@@ -66,42 +66,38 @@ function App() {
             q1={
               "How you feel in your mind, heart and conscience thoughts (Stressed, anxious, worried, unsure, over excited, unfocused, hungry, physically not well.)"
             }
-            q1name={"emotionalfeelmessage"}
+            q1name={"q1emotionalfeelmessage"}
             q2={"What do you need to help you? / How can you be supported?"}
-            q2name={"emotionalhelpmessage"}
-            q3={"What do you need to help you? / How can you be supported?"}
+            q2name={"q2emotionalhelpmessage"}
+            // q3={"What do you need to help you? / How can you be supported?"}
+            // q3name={"emotionalhelpmessage"}
           ></CardWithHeader>
 
           <CardWithHeader
             //  maintitle={"What do you have that will help you reach the GOAL"}
             sectiontitle={"Taha whānau (family and social health)"}
             q1={"Who gives you strength, support, security & identity?"}
+            q1name={"q1familyhelpmessage"}
             q2={"Who do you have to support you? Who can you talk to?"}
+            q2name={"q2familyhelpmessage"}
             q3={"Who do you need to help you? / How can you be supported?"}
-            q3name={"bodyhelpmessage"}
+            q3name={"q3familyhelpmessage"}
           ></CardWithHeader>
 
           <CardWithHeader
             //  maintitle={"What do you have that will help you reach the GOAL"}
             sectiontitle={"Taha wairua (spiritual wellbeing and sense of self)"}
             q1={"What do you believe / hold close to you?"}
+            q1name={"q1spiritualmessage"}
             q2={
               "What is important in your life?(Family, Friends, Religion, Beliefs and Traditions)"
             }
+            q2name={"q2spiritualmessage"}
             q3={"Who do you need to help you? / How can you be supported?"}
-            q3name={"bodyhelpmessage"}
+            q3name={"q3spiritualmessage"}
           ></CardWithHeader>
 
-          {/* <div className='form-group col-12'>
-            <label htmlFor='inputAddress'>Address</label>
-            <input
-              type='text'
-              className='form-control'
-              id='inputAddress'
-              placeholder='1234 Main St'
-              name='user_address'
-            /> */}
-          {/* </div>{" "} */}
+          
           <div className='form-group col-md-6'>
             <label htmlFor='message'>message</label>
             <textarea

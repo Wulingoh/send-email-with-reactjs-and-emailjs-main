@@ -13,13 +13,12 @@ const CardWithHeader = (props) => {
             <textarea
               type='text'
               className='form-control'
-              id='inputmessage4'
+              id={props.q1name}
               name={props.q1name}
             />
           </Card.Text>
         </Card.Body>
       </Card>
-
       <Card>
         <Card.Body>
           <Card.Title>{props.q2}</Card.Title>
@@ -27,26 +26,29 @@ const CardWithHeader = (props) => {
             <textarea
               type='text'
               className='form-control'
-              id='inputmessage4'
+              id={props.q2name}
               name={props.q2name}
             />
           </Card.Text>
         </Card.Body>
       </Card>
-
-      <Card>
-        <Card.Body>
-          <Card.Title>{props.q3}</Card.Title>
-          <Card.Text>
-            <textarea
-              type='text'
-              className='form-control'
-              id='inputmessage4'
-              name={props.q3name}
-            />
-          </Card.Text>
-        </Card.Body>
-      </Card>
+      {props.q3 != null ? (
+        <Card>
+          <Card.Body>
+            <Card.Title>{props.q3}</Card.Title>
+            <Card.Text>
+              <textarea
+                type='text'
+                className='form-control'
+                id={props.q3name}
+                name={props.q3name}
+              />
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
