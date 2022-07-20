@@ -8,7 +8,7 @@ const CardWithHeader = (props) => {
       <Card>
         <Card.Header>{props.sectiontitle}</Card.Header>
         <Card.Body>
-          <Card.Title>{props.q1}</Card.Title>
+          <Card.Text>{props.q1}</Card.Text>
           <Card.Text>
             <textarea
               type='text'
@@ -21,7 +21,7 @@ const CardWithHeader = (props) => {
       </Card>
       <Card>
         <Card.Body>
-          <Card.Title>{props.q2}</Card.Title>
+          <Card.Text>{props.q2}</Card.Text>
           <Card.Text>
             <textarea
               type='text'
@@ -35,7 +35,7 @@ const CardWithHeader = (props) => {
       {props.q3 != null ? (
         <Card>
           <Card.Body>
-            <Card.Title>{props.q3}</Card.Title>
+            <Card.Text>{props.q3}</Card.Text>
             <Card.Text>
               <textarea
                 type='text'
