@@ -3,9 +3,13 @@ import Card from "react-bootstrap/Card";
 
 const CardWithHeader = (props) => {
   return (
-    <div className='container'>
+    <div
+      className='container'
+      style={{ backgroundColor: props.bgcolor, padding: "25px" }}
+    >
       <h2>{props.maintitle}</h2>
-      <Card>
+
+      <Card class='bg-transparent'>
         <Card.Header>{props.sectiontitle}</Card.Header>
         <Card.Body>
           <Card.Text>{props.q1}</Card.Text>
@@ -19,7 +23,8 @@ const CardWithHeader = (props) => {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card>
+
+      <Card class='bg-transparent'>
         <Card.Body>
           <Card.Text>{props.q2}</Card.Text>
           <Card.Text>
@@ -33,7 +38,7 @@ const CardWithHeader = (props) => {
         </Card.Body>
       </Card>
       {props.q3 != null ? (
-        <Card>
+        <Card class=' bg-transparent'>
           <Card.Body>
             <Card.Text>{props.q3}</Card.Text>
             <Card.Text>

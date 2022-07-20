@@ -7,14 +7,14 @@ import CardWithHeader from "../src/components/cards";
 function App() {
   init("user_aVMjgLam4rroy8ETgabF9");
   const form = useRef();
-  let q1 = "";
-  let q1name = "";
-  let q2 = "";
-  let q2name = "";
-  let q3 = "";
-  let q3name = "";
-  let q4 = "";
-  let q4name = "";
+  // let q1 = "";
+  // let q1name = "";
+  // let q2 = "";
+  // let q2name = "";
+  // let q3 = "";
+  // let q3name = "";
+  // let q4 = "";
+  // let q4name = "";
   const handleSubmit = (e) => {
     e.preventDefault();
     // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
@@ -35,6 +35,7 @@ function App() {
         }
       );
   };
+
   return (
     <div className='container'>
       <form onSubmit={handleSubmit} ref={form}>
@@ -50,7 +51,7 @@ function App() {
           </div>
 
           <CardWithHeader
-            // maintitle={"What do you have that will help you reach the GOAL"}
+            bgcolor='#fbe5d6'
             sectiontitle={"Taha Tinana-Physical well-being"}
             q1={"How does your body feel, moves, and grows?"}
             q1name={"q1bodyfeelmessage"}
@@ -61,7 +62,7 @@ function App() {
           ></CardWithHeader>
 
           <CardWithHeader
-            //  maintitle={"What do you have that will help you reach the GOAL"}
+            bgcolor='#e2f0d9'
             sectiontitle={"Taha hinengaro (mental and emotional wellbeing)"}
             q1={
               "How you feel in your mind, heart and conscience thoughts (Stressed, anxious, worried, unsure, over excited, unfocused, hungry, physically not well.)"
@@ -69,12 +70,10 @@ function App() {
             q1name={"q1emotionalfeelmessage"}
             q2={"What do you need to help you? / How can you be supported?"}
             q2name={"q2emotionalhelpmessage"}
-            // q3={"What do you need to help you? / How can you be supported?"}
-            // q3name={"emotionalhelpmessage"}
           ></CardWithHeader>
 
           <CardWithHeader
-            //  maintitle={"What do you have that will help you reach the GOAL"}
+            bgcolor='#fdcff4'
             sectiontitle={"Taha whānau (family and social health)"}
             q1={"Who gives you strength, support, security & identity?"}
             q1name={"q1familyhelpmessage"}
@@ -85,7 +84,7 @@ function App() {
           ></CardWithHeader>
 
           <CardWithHeader
-            //  maintitle={"What do you have that will help you reach the GOAL"}
+            bgcolor='#fff2cc'
             sectiontitle={"Taha wairua (spiritual wellbeing and sense of self)"}
             q1={"What do you believe / hold close to you?"}
             q1name={"q1spiritualmessage"}
@@ -97,7 +96,6 @@ function App() {
             q3name={"q3spiritualmessage"}
           ></CardWithHeader>
 
-          
           <div className='form-group col-md-6'>
             <label htmlFor='message'>message</label>
             <textarea

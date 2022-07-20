@@ -1,0 +1,39 @@
+Taha whānau (family and social health)
+ Who gives you strength, support, security & identity?
+{{q1bodyfeelmessage}}
+
+ Who do you have to support you? Who can you talk to?
+{{q2bodycaremessage}}
+
+ Who do you need to help you? / How can you be supported?"
+{{q3bodyhelpmessage}}
+
+Taha hinengaro (mental and emotional wellbeing)
+
+How you feel in your mind, heart and conscience thoughts (Stressed, anxious, worried, unsure, over excited, unfocused, hungry, physically not well.          
+{{q1emotionalfeelmessage}}
+
+What do you need to help you? / How can you be supported?
+{{q2emotionalhelpmessage}}
+
+Taha whānau (family and social health)
+
+Who gives you strength, support, security & identity
+{{q1familyhelpmessage}}
+
+Who do you have to support you? Who can you talk to?
+{{q2familyhelpmessage}}
+           
+Who do you need to help you? / How can you be supported?
+{{q3familyhelpmessage}}
+
+Taha wairua (spiritual wellbeing and sense of self)
+
+What do you believe / hold close to you?
+{{q1spiritualmessage}}
+
+What is important in your life?(Family, Friends, Religion, Beliefs and Traditions)
+ {{q2spiritualmessage}}
+ 
+Who do you need to help you? / How can you be supported?
+{{q3spiritualmessage}}
