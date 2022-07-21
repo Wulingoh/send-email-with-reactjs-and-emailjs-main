@@ -9,10 +9,21 @@ const CardWithHeader = (props) => {
     >
       <h2>{props.maintitle}</h2>
       <Card className='bg-transparent'>
-        <Card.Header>{props.sectiontitle}</Card.Header>
+        <Card.Header style={{ fontSize: "1.5em", fontWeight: "bold" }}>
+          {props.sectiontitle}
+        </Card.Header>
+        <Card.Header style={{ fontSize: "1em" }}>
+          {props.description}
+        </Card.Header>
+        <Card.Header style={{ fontSize: "1em" }}>
+          {props.description2}
+        </Card.Header>
+        <Card.Header style={{ fontSize: "1em" }}>
+          {props.description3}
+        </Card.Header>
+
         <Card.Body>
-          <Card.Text>{props.description}</Card.Text>
-          <Card.Text>{props.q1}</Card.Text>
+          <Card.Text style={{ fontSize: "1.2em" }}>{props.q1}</Card.Text>
           <Card.Text>
             <textarea
               type='text'
@@ -25,7 +36,7 @@ const CardWithHeader = (props) => {
       </Card>
       <Card className='bg-transparent'>
         <Card.Body>
-          <Card.Text>{props.q2}</Card.Text>
+          <Card.Text style={{ fontSize: "1.2em" }}>{props.q2}</Card.Text>
           <Card.Text>
             <textarea
               type='text'
@@ -39,7 +50,7 @@ const CardWithHeader = (props) => {
       {props.q3 != null ? (
         <Card className=' bg-transparent'>
           <Card.Body>
-            <Card.Text>{props.q3}</Card.Text>
+            <Card.Text style={{ fontSize: "1.2em" }}>{props.q3}</Card.Text>
             <Card.Text>
               <textarea
                 type='text'
