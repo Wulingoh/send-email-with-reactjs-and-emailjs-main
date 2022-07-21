@@ -9,9 +9,10 @@ const CardWithHeader = (props) => {
     >
       <h2>{props.maintitle}</h2>
 
-      <Card class='bg-transparent'>
+      <Card className='bg-transparent'>
         <Card.Header>{props.sectiontitle}</Card.Header>
         <Card.Body>
+          <Card.Text>{props.description}</Card.Text>
           <Card.Text>{props.q1}</Card.Text>
           <Card.Text>
             <textarea
@@ -24,7 +25,7 @@ const CardWithHeader = (props) => {
         </Card.Body>
       </Card>
 
-      <Card class='bg-transparent'>
+      <Card className='bg-transparent'>
         <Card.Body>
           <Card.Text>{props.q2}</Card.Text>
           <Card.Text>
@@ -38,7 +39,7 @@ const CardWithHeader = (props) => {
         </Card.Body>
       </Card>
       {props.q3 != null ? (
-        <Card class=' bg-transparent'>
+        <Card className=' bg-transparent'>
           <Card.Body>
             <Card.Text>{props.q3}</Card.Text>
             <Card.Text>
