@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs, { init } from "@emailjs/browser";
 import CardWithHeader from "../src/components/cards";
+import "./index.css";
 //https://github.com/abdulwaqar844/send-email-with-reactjs-and-emailjs
 function App() {
   init("user_aVMjgLam4rroy8ETgabF9");
@@ -31,7 +32,7 @@ function App() {
   return (
     <div className='container'>
       <form onSubmit={handleSubmit} ref={form}>
-        <h1 className='text-center'>Your Health and Wellness Journey</h1>
+        <div className='appheadertitle'>Your Health and Wellness Journey</div>
         <div className='form-row'>
           <h3>Te whare tapa whā and wellbeing</h3>
           <p style={{ fontSize: "1.2em" }}>
@@ -135,7 +136,7 @@ function App() {
           </div> */}
         </div>
 
-        <button type='submit' className='btn btn-outline-primary'>
+        <button type='submit' className='btn btn-outline-primary buttonSubmit'>
           <i className='bi bi-check-circle-fill text-dark '> </i>
           Send Your Journey
         </button>
