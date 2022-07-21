@@ -27,6 +27,7 @@ const CardWithHeader = (props) => {
           <Card.Text>
             <textarea
               type='text'
+              rows='4'
               className='form-control'
               id={props.q1name}
               name={props.q1name}
@@ -40,6 +41,7 @@ const CardWithHeader = (props) => {
           <Card.Text>
             <textarea
               type='text'
+              rows='4'
               className='form-control'
               id={props.q2name}
               name={props.q2name}
@@ -54,6 +56,7 @@ const CardWithHeader = (props) => {
             <Card.Text>
               <textarea
                 type='text'
+                rows='4'
                 className='form-control'
                 id={props.q3name}
                 name={props.q3name}
