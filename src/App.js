@@ -56,7 +56,13 @@ function App() {
             </label>
             <input type='text' className='form-control' name='lastname' />
           </div>
-
+          <div className='form-group col-md-6'>
+            <label htmlFor='Last Name' style={{ fontSize: "1.2em" }}>
+              Choose your Tutor
+            </label>
+            <input type='text' className='form-control' name='tutor' />
+          </div>
+          
           <CardWithHeader
             bgcolor='#fbe5d6'
             sectiontitle={"Taha Tinana-Physical well-being"}
