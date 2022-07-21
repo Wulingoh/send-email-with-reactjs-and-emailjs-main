@@ -31,7 +31,7 @@ function App() {
   return (
     <div className='container'>
       <form onSubmit={handleSubmit} ref={form}>
-        <h1 className='text-center'>Software Learner Journey</h1>
+        <h1 className='text-center'>Your Health and Wellness Journey</h1>
         <div className='form-row'>
           <h3>Te whare tapa whā and wellbeing</h3>
           <p style={{ fontSize: "1.2em" }}>
