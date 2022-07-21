@@ -1,11 +1,23 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs, { init } from "@emailjs/browser";
 import CardWithHeader from "../src/components/cards";
+import Select from "react-select";
 import "./index.css";
+
+//https://react-select.com/home
+const options = [
+  { value: "Gary Dix", label: "Gary Dix" },
+  { value: "Jeffery Hong", label: "Jeffery Hong" },
+  { value: "Dipti Kartikeya", label: "Dipti Kartikeya" },
+  { value: "Harpreet Kaur", label: "Harpreet Kaur" },
+];
+
 //https://github.com/abdulwaqar844/send-email-with-reactjs-and-emailjs
 function App() {
   init("user_aVMjgLam4rroy8ETgabF9");
   const form = useRef();
+  const [selectedOption, setSelectedOption] = useState(null);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
@@ -27,6 +39,33 @@ function App() {
           console.log(error.text);
         }
       );
+  };
+  const customStyles = {
+    menu: (provided, state) => ({
+      ...provided,
+      width: 400,
+      // borderBottom: "1px dotted pink",
+      // color: state.selectProps.menuColor,
+      color: "transparent",
+      // padding: 20,
+    }),
+
+    option: (provided, state) => ({
+      ...provided,
+      // borderBottom: "1px dotted pink",
+      color: state.isSelected ? "red" : "blue",
+      // padding: 20,
+    }),
+    // control: () => ({
+    //   // none of react-select's styles are passed to <Control />
+    //   width: 300,
+    // }),
+    singleValue: (provided, state) => {
+      const opacity = state.isDisabled ? 0.5 : 1;
+      const transition = "opacity 300ms";
+
+      return { ...provided, opacity, transition };
+    },
   };
 
   return (
@@ -56,15 +95,24 @@ function App() {
             </label>
             <input type='text' className='form-control' name='lastname' />
           </div>
-          <div className='form-group col-md-6'>
-            <label htmlFor='Last Name' style={{ fontSize: "1.2em" }}>
-              Choose your Tutor
-            </label>
-            <input type='text' className='form-control' name='tutor' />
+          <div
+            className='form-group col-md-2'
+            style={{ fontSize: "1.2em", width: "100%" }}
+          >
+            <label>Select your Tutor</label>
+
+            <Select 
+              styles={customStyles}
+              width='500px'
+              name='tutor'
+              defaultValue={selectedOption}
+              onChange={setSelectedOption}
+              options={options}
+            />
           </div>
-          
+
           <CardWithHeader
-            bgcolor='#fbe5d6'
+            bgcolor='#f3eae4'
             sectiontitle={"Taha Tinana-Physical well-being"}
             description={`Taha tinana is your physical wellbeing. It is about how your body grows, feels and moves, and how you care for it. 
               
@@ -100,7 +148,7 @@ function App() {
           ></CardWithHeader>
 
           <CardWithHeader
-            bgcolor='#fdcff4'
+            bgcolor='#f1d2eb'
             sectiontitle={"Taha whānau (family and social health)"}
             description={`Taha whānau is about who makes you feel like you belong, who you care about and who you share your life with.Whānau is about extended relationships – it’s not just your immediate relatives, it’s your friends, hoamahi (colleagues), community and the people you care about.`}
             description2={`Everyone has a place and a role to fulfil within their whānau, and whānau contributes to your individual wellbeing and identity. Spending time with whānau, doing things for them and getting involved gives you a feeling of purpose, connection and wellbeing.`}
