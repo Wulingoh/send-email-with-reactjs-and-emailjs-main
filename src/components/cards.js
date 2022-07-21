@@ -8,7 +8,6 @@ const CardWithHeader = (props) => {
       style={{ backgroundColor: props.bgcolor, padding: "25px" }}
     >
       <h2>{props.maintitle}</h2>
-
       <Card className='bg-transparent'>
         <Card.Header>{props.sectiontitle}</Card.Header>
         <Card.Body>
@@ -24,7 +23,6 @@ const CardWithHeader = (props) => {
           </Card.Text>
         </Card.Body>
       </Card>
-
       <Card className='bg-transparent'>
         <Card.Body>
           <Card.Text>{props.q2}</Card.Text>

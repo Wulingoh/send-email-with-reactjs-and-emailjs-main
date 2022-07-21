@@ -41,6 +41,16 @@ function App() {
       <form onSubmit={handleSubmit} ref={form}>
         <h1 className='text-center'>Software Learner Journey</h1>
         <div className='form-row'>
+          <h3>Te whare tapa whā and wellbeing</h3>
+          <p>
+            The Māori holistic model of health, te whare tapa whā, reminds you
+            to take care of all the different aspects of your life to support
+            your wellbeing.{"   "}
+            <a href='https://www.healthnavigator.org.nz/healthy-living/t/te-whare-tapa-wh%C4%81-and-wellbeing/'>
+              Health Mavigator
+            </a>
+          </p>
+
           <div className='form-group col-md-6'>
             <label htmlFor='First Name'>First Name</label>
             <input type='text' className='form-control' name='firstname' />
@@ -121,7 +131,8 @@ function App() {
           </div> */}
         </div>
 
-        <button type='submit' className='btn btn-primary'>
+        <button type='submit' className='btn btn-outline-primary'>
+          <i className='bi bi-check-circle-fill text-dark '> </i>
           Send Your Journey
         </button>
       </form>
