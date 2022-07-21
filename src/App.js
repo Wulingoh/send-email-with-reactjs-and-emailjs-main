@@ -1,20 +1,10 @@
 import React, { useRef } from "react";
 import emailjs, { init } from "@emailjs/browser";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
 import CardWithHeader from "../src/components/cards";
 //https://github.com/abdulwaqar844/send-email-with-reactjs-and-emailjs
 function App() {
   init("user_aVMjgLam4rroy8ETgabF9");
   const form = useRef();
-  // let q1 = "";
-  // let q1name = "";
-  // let q2 = "";
-  // let q2name = "";
-  // let q3 = "";
-  // let q3name = "";
-  // let q4 = "";
-  // let q4name = "";
   const handleSubmit = (e) => {
     e.preventDefault();
     // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
@@ -27,7 +17,9 @@ function App() {
       )
       .then(
         (result) => {
-          alert("Message Sent Successfully");
+          alert(
+            "Thankyou for your Learners Journey submission, it has been sent successfully."
+          );
           console.log(result.text);
         },
         (error) => {
