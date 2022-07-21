@@ -39,7 +39,7 @@ function App() {
             to take care of all the different aspects of your life to support
             your wellbeing.{"   "}
             <a href='https://www.healthnavigator.org.nz/healthy-living/t/te-whare-tapa-wh%C4%81-and-wellbeing/'>
-              Health Mavigator
+              Health Navigator
             </a>
           </p>
 
@@ -78,7 +78,8 @@ function App() {
             bgcolor='#e2f0d9'
             sectiontitle={"Taha hinengaro (mental and emotional wellbeing)"}
             description={`Taha hinengaro is your mind, heart, conscience, thoughts and feelings. It’s about how you feel, as well as how you communicate and think. `}
-            description2={`Taking care of taha hinengaro is important for everyone, regardless of whether or not you’ve experienced mental illness or distress. When taha hinengaro is strong, you can better cope with life’s challenges. You can express your feelings and reach out for support from friends, whānau and hoamahi (colleagues) if you need to. `}
+            description2={`Taking care of taha hinengaro is important for everyone, regardless of whether or not you’ve experienced mental illness or distress. When taha hinengaro is strong, you can better cope with life’s challenges.`}
+            description3={`You can express your feelings and reach out for support from friends, whānau and hoamahi (colleagues) if you need to. `}
             q1={
               "How you feel in your mind, heart and conscience thoughts (Stressed, anxious, worried, unsure, over excited, unfocused, hungry, physically not well.)"
             }
