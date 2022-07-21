@@ -45,11 +45,15 @@ function App() {
           </p>
 
           <div className='form-group col-md-6'>
-            <label htmlFor='First Name'>First Name</label>
+            <label htmlFor='First Name' style={{ fontSize: "1.2em" }}>
+              First Name
+            </label>
             <input type='text' className='form-control' name='firstname' />
           </div>
           <div className='form-group col-md-6'>
-            <label htmlFor='Last Name'>Last Name</label>
+            <label htmlFor='Last Name' style={{ fontSize: "1.2em" }}>
+              Last Name
+            </label>
             <input type='text' className='form-control' name='lastname' />
           </div>
 
