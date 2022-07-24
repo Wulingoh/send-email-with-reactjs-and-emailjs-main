@@ -5,7 +5,11 @@ const CardWithHeader = (props) => {
   return (
     <div
       className='container'
-      style={{ backgroundColor: props.bgcolor, padding: "25px" }}
+      style={{
+        backgroundColor: props.bgcolor,
+        padding: "1em",
+        marginBottom: "1em",
+      }}
     >
       <h2>{props.maintitle}</h2>
       <Card className='bg-transparent'>
