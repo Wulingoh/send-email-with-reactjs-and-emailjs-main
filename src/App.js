@@ -7,7 +7,7 @@ import "./index.css";
 //https://react-select.com/home
 const options = [
   { value: "Gary.Dix", label: "Gary Dix" },
-  { value: "Jeffery.Hong", label: "Jeffery Hong" },
+  { value: "Jeffrey.Hong", label: "Jeffrey Hong" },
   { value: "Dipti.Kartikeya", label: "Dipti Kartikeya" },
   { value: "Harpreet.Kaur", label: "Harpreet Kaur" },
 ];
