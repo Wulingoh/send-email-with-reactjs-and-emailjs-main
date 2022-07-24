@@ -6,10 +6,10 @@ import "./index.css";
 
 //https://react-select.com/home
 const options = [
-  { value: "GaryDix", label: "Gary Dix" },
-  { value: "JefferyHong", label: "Jeffery Hong" },
-  { value: "DiptiKartikeya", label: "Dipti Kartikeya" },
-  { value: "HarpreetKaur", label: "Harpreet Kaur" },
+  { value: "Gary.Dix", label: "Gary Dix" },
+  { value: "Jeffery.Hong", label: "Jeffery Hong" },
+  { value: "Dipti.Kartikeya", label: "Dipti Kartikeya" },
+  { value: "Harpreet.Kaur", label: "Harpreet Kaur" },
 ];
 
 //https://github.com/abdulwaqar844/send-email-with-reactjs-and-emailjs
