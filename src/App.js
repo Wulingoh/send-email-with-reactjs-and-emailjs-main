@@ -17,7 +17,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import { Card } from "./components/Card";
-// import {SendIcon} from '@mui/icons-material';
+import SendIcon from '@mui/icons-material/Send';
 
 function Copyright() {
   return (
@@ -277,7 +277,7 @@ export default function Wellness() {
                     type="submit"
                     fullWidth
                     variant="contained"
-                    // startIcon={<SendIcon />}
+                    endIcon={<SendIcon sx={{marginLeft: "10px"}}/>}
 
                     sx={{
                       mt: 1,
