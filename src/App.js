@@ -57,27 +57,27 @@ export default function Wellness() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(JSON.stringify(templateParams));
+    // console.log(JSON.stringify(templateParams));
     
-    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-    // emailjs
-    //   .sendForm(
-    //     "service_03k440o",
-    //     "template_ymy3mpi",
-    //     templateParams,
-    //     "ZKFMughkI-DFVOiem"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       alert(
-    //         "Thankyou for your Learners Journey submission, it has been sent successfully."
-    //       );
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_PUBLIC_KEY')
+    emailjs
+      .send(
+        "service_03k440o",
+        "template_ymy3mpi",
+        templateParams,
+        "ZKFMughkI-DFVOiem"
+      )
+      .then(
+        (result) => {
+          alert(
+            "Thankyou for your Learners Journey submission, it has been sent successfully."
+          );
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   const handleChange = (event) => {
