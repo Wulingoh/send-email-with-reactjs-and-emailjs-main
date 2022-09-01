@@ -60,6 +60,7 @@ export default function Wellness() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setDisabled(true);
     // console.log(JSON.stringify(templateParams));
     
     emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_PUBLIC_KEY')
@@ -75,6 +76,7 @@ export default function Wellness() {
           alert(
             "Thankyou for your Learners Journey submission, it has been sent successfully."
           );
+          setDisabled(false);
           console.log(result.text);
         },
         (error) => {
@@ -91,9 +93,10 @@ export default function Wellness() {
     });
   };
 
-
+  const [disabled, setDisabled] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const imageUrl = windowWidth >= 400 ? desktopImage : mobileImage;
+  
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowWidth(window.innerWidth);
@@ -300,8 +303,8 @@ export default function Wellness() {
                     type="submit"
                     fullWidth
                     variant="contained"
+                    disabled={disabled}
                     endIcon={<SendIcon sx={{marginLeft: "10px"}}/>}
-
                     sx={{
                       mt: 1,
                       mb: 2,
