@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs, { init } from "@emailjs/browser";
 import AppBar from "@mui/material/AppBar";
 import Button from "@mui/material/Button";
@@ -11,6 +11,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Paper, Select } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
@@ -18,6 +19,8 @@ import Divider from "@mui/material/Divider";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import { Card } from "./components/Card";
 import SendIcon from '@mui/icons-material/Send';
+import desktopImage from './images/maraeDesktop1.png';
+import mobileImage from './images/maraeMobile4.png';
 
 function Copyright() {
   return (
@@ -39,7 +42,7 @@ const tutors = [
   { value: "Harpreet.Kaur", label: "Harpreet Kaur" },
 ];
 
-const theme = createTheme();
+const theme = createTheme() ;
 
 export default function Wellness() {
   init("user_aVMjgLam4rroy8ETgabF9");
@@ -88,27 +91,46 @@ export default function Wellness() {
     });
   };
 
- 
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const imageUrl = windowWidth >= 400 ? desktopImage : mobileImage;
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleWindowResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    }
+  }, []);
+
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <main style={{ backgroundColor: "#F7F2E7" }}>
+      <Container className="mainDiv" sx={{ 
+        backgroundImage: `url(${imageUrl})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        paddingBottom: "40px"}}>
         {/* Hero unit */}
         <Box
           sx={{
-            bgcolor: "#F7F2E7",
-            pt: 8,
-            pb: 6,
+            // bgcolor: "#F7F2E7",
+            pt: 6
           }}
         >
-          <Container maxWidth="sm">
+          <Container maxWidth="sm" sx={{paddingTop:'137px'}}>
             <Typography
               component="h1"
-              variant="h3"
+              variant="h4"
               align="center"
               color="text.primary"
               gutterBottom
+              sx={{paddingTop:"10px", paddingBottom:"10px", fontSize:"30px"}}
+              
             >
               Your Health and Wellness Journey
             </Typography>
@@ -116,14 +138,15 @@ export default function Wellness() {
         </Box>
         <Container sx={{}} maxWidth="md">
           {/* End hero unit */}
-          <Paper sx={{ backgroundColor: "#E0ECE4" }}>
+          <Paper sx={{  }}>
             <Container
               component="form"
               noValidate
               autoComplete="off"
               onSubmit={handleSubmit}
+              
             >
-              <Grid container marginBottom={"20px"}>
+              <Grid container marginBottom={"20px"} sx={{ backgroundColor: "#E0ECE4" }}>
                 <Grid item xs={12} marginBottom={"10px"}>
                   <Typography
                     variant="h5"
@@ -298,20 +321,13 @@ export default function Wellness() {
             </Container>
           </Paper>
         </Container>
-      </main>
+      </Container>
       {/* Footer */}
-      <Box sx={{ bgcolor: "#F7F2E7", p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
+      <Box sx={{ 
+        paddingTop: "10px",
+        paddingBottom: "30px"
+        }} 
+        component="footer">
         <Copyright />
       </Box>
       {/* End footer */}

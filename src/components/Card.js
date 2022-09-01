@@ -5,7 +5,7 @@ import TextareaAutosize from "@mui/material/TextareaAutosize";
 
 export const Card = (props) => {
   return (
-    <Grid container spacing={2} marginTop={"20px"}>
+    <Grid container spacing={1} marginTop={"20px"}  sx={{ backgroundColor: "#E0ECE4" }}>
       <Grid item xs={12}>
         <Typography variant="h5" component="header">
           {props.sectiontitle}
